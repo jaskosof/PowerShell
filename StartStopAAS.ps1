@@ -97,11 +97,3 @@ else
     Write-Output "Now stopping $($AnalysisServerName)"
     $null = Suspend-AzAnalysisServicesServer -ResourceGroupName $ResourceGroupName -Name $AnalysisServerName
 }
- 
- 
- 
-########################################################
-# Show when finished
-########################################################
-$Duration = NEW-TIMESPAN –Start $StartDate –End (GET-DATE)
-Write-Output "Done in $([int]$Duration.TotalMinutes) minute(s) and $([int]$Duration.Seconds) second(s)"
